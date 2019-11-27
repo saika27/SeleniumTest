@@ -17,7 +17,7 @@ public class SearchVideos extends DriverImplementation{
 	public void SearchText(String searchString) throws InterruptedException
 	{
 		//clicking on Video tab if no prior search performedTestIsElementPresent present = new TestIsElementPresent();
-		if(TestIsElementPresent.isElementPresent(By.xpath(OR.getProperty("VideoLogo")))){
+		if(isElementPresent(By.xpath(OR.getProperty("VideoLogo")))){
 			
 		driver.findElement(By.xpath(OR.getProperty("VideoLogo"))).click();
 		System.out.println("Clicking on video button from Home Page");
@@ -32,14 +32,14 @@ public class SearchVideos extends DriverImplementation{
 		
 			
 		}
-		else if(TestIsElementPresent.isElementPresent(By.xpath(OR.getProperty("VideoTab"))))
+		else if(isElementPresent(By.xpath(OR.getProperty("VideoTab"))))
 		{
 			driver.findElement(By.xpath(OR.getProperty("VideoTab"))).click();
 			clickButton(searchString);
 			
 			
 		}
-        else if (TestIsElementPresent.isElementPresent(By.xpath(OR.getProperty("SrchBoxVid")))){
+        else if (isElementPresent(By.xpath(OR.getProperty("SrchBoxVid")))){
 			
         	clickButton(searchString);
 			

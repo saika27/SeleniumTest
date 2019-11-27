@@ -18,7 +18,7 @@ public class SearchWebResults extends DriverImplementation {
 	public void SearchText(String searchString) throws InterruptedException{
 		
 		//clicking on search text box
-		if(TestIsElementPresent.isElementPresent(By.xpath(OR.getProperty("SrchBoxMain")))){
+		if(isElementPresent(By.xpath(OR.getProperty("SrchBoxMain")))){
 		driver.findElement(By.xpath(OR.getProperty("SrchBoxMain"))).sendKeys(searchString);
 		
 		Thread.sleep(2000);
@@ -28,7 +28,7 @@ public class SearchWebResults extends DriverImplementation {
 		
 		Thread.sleep(1000);
 		}
-		else if (TestIsElementPresent.isElementPresent(By.xpath(OR.getProperty("SrchBoxVid")))){
+		else if (isElementPresent(By.xpath(OR.getProperty("SrchBoxVid")))){
 			
 			driver.findElement(By.xpath(OR.getProperty("SrchBoxVid"))).clear();
 			driver.findElement(By.xpath(OR.getProperty("SrchBoxVid"))).sendKeys(searchString);
