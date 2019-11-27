@@ -21,7 +21,7 @@ public class SearchWebResults extends DriverImplementation {
 		if(isElementPresent(By.xpath(OR.getProperty("SrchBoxMain")))){
 		driver.findElement(By.xpath(OR.getProperty("SrchBoxMain"))).sendKeys(searchString);
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		//clicking on search button
 		driver.findElement(By.xpath(OR.getProperty("SrchBtn"))).click();
 		System.out.println("Displaying web results for keyword "+" '"+searchString+"'");
