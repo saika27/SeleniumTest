@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Search Engine Test]">
+  <test thread-count="5" name="Functional Test-Search Web(failed)">
+    <classes>
+      <class name="com.automation.testcases.SearchWebResults">
+        <methods>
+          <include name="setUp"/>
+          <include name="SearchText" invocation-numbers="1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.automation.testcases.SearchWebResults -->
+    </classes>
+  </test> <!-- Functional Test-Search Web(failed) -->
+</suite> <!-- Failed suite [Search Engine Test] -->
